@@ -5,7 +5,7 @@ Entering into the world of AirBnB as a prospective host can be tricky. With so m
 
 ## The Team:
 - Justin Frank
-- Leo Ramirez
+- Leonardo Ramirez
 - Veohnti Afokpa
 - Tari Okoya-Koren
 - Araz Ohanessian
@@ -17,7 +17,7 @@ The data we worked with came from an open data source [InsideAirbnb](http://insi
 ## The Process:
     
 ### Data Cleaning:
->[listings_data_cleaning.ipynb](https://github.com/Justin-FrankGH/project3/blob/master/jupyter_notebooks/listings_data_cleaning.ipynb)
+>[listings_data_cleaning.ipynb](jupyter_notebooks/listings_data_cleaning.ipynb)
 
 Provided with a thorough New York AirBnB listing dataset, the first task was isolating the relevant data and cleaning it for our purposes. Using pandas and data exploration tools in Jupyter Notebook, Leo found Nan value data points, listings with zero availability, and features irrelevent to our process. Considering we were also going to compare price to location, all listings lacking an exact location were dropped. Employing dataframe cleaning measures, he was then able to transform the dataset into one that's cleaner, consistent, and easy to use. Finally, the newly cleaned data was exported as a CSV for application in all the following processes.
         
