@@ -27,14 +27,14 @@ Provided with a thorough New York AirBnB listing dataset, the first task was iso
 Furthering the data exploration process, Tari and Araz created Tableau visualizations to ascertain which features showed a strong correlation with a listing's price. The items seen to show an impact on price were logged and then used to train the machine learning models, referenced below.
 
 ### Machine Learning part 1 - Veohnti, Milton
->[initial_machine_learning_attempt.ipynb](https://github.com/Justin-FrankGH/project3/blob/master/jupyter_notebooks/initial_machine_learning_attempt.ipynb)
+>[initial_machine_learning_attempt.ipynb](jupyter_notebooks/initial_machine_learning_attempt.ipynb)
 
 Using the features deemed relevant from Tableau, Veohnti and Milton trained both Ridge and SVR maching learning models. Unfortunately, however, the models returned dismal accuracy scores. While these models were ultimately unusable, we learned two things from the process:
     1. Our feature selection was narrow and limited to our presupposed notion of what would impact price. With such an expansive dataset, it was important for us to explore the possibility of seemingly inconsequential features affecting price. 
     2. The visualizations we created were only showing the correlation between price and a given feature. What they didn't tell us were the weights each feature had on price affect. This is to say, we could conclude which features were affecting price, but not which were affecting price the most.
     
 ### Machine Learning part 2 - Leo
->[xgboost_airbnb_ny.ipynb](https://github.com/Justin-FrankGH/project3/blob/master/jupyter_notebooks/xgboost_airbnb_ny.ipynb)
+>[xgboost_airbnb_ny.ipynb](jupyter_notebooks/xgboost_airbnb_ny.ipynb)
 
 To correct our approach, XGBoost was employed to gain the weights of each feature and more accurately train a model. Once done, the XGBoost model presented a 70% accuracy score, a far better result than the preceeding regression models. 
 
@@ -44,12 +44,12 @@ To correct our approach, XGBoost was employed to gain the weights of each featur
 Seeing the new weights and relevant features, Tari and Araz once again applied Tableau to the data and reconfirmed the relations of features to median price. The visuals show why or why not a feature had a relation to a given listing's price.
 
 ### Machine Learning part 3 - Veohnti, Milton
->[neural_net_models.ipynb](https://github.com/Justin-FrankGH/project3/blob/master/jupyter_notebooks/neural_net_models.ipynb)
+>[neural_net_models.ipynb](jupyter_notebooks/neural_net_models.ipynb)
 
 To ensure that a 70% accuracy score was the most accurate model we could apply, Veohnti and Milton experimented with Neural Net Modeling. Using multiple layers and an SGD Optimizer, several accuracy tests were performed. The end results showed scores just shy of that of the XGBoost model. 
 
 ### Predict Prices	- Justin
->[user_input.ipynb](https://github.com/Justin-FrankGH/project3/blob/master/jupyter_notebooks/user_input.ipynb)
+>[user_input.ipynb](jupyter_notebooks/user_inputV2.ipynb)
 
 Working with the cleaned data provided by Leo, Jupyter Notebook widgets were imported and used to create an interactive user input form. The input values were set to be live updating and could be pulled for use in a machine learning model prediction formula. After compiling the new input data, a function was defined to first aggregate and zip the data with their respective titles. Next, the data was logged, scaled using the predefined training data, and funneled through the XGBoost predict method. Finally, the output was produced and put through and inverse logarithm function. This resulted in the final predicted price for the user's listing. 
 
